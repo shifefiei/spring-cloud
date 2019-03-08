@@ -1,0 +1,14 @@
+# Created by .ignore support plugin (hsz.mobi)
+.gitignore
+.idea/
+spring-cloud-domain/spring-cloud-domain.iml
+spring-cloud-domain/target/
+spring-cloud-provider-dept/spring-cloud-provider-dept.iml
+spring-cloud-provider-dept/target/
+spring-cloud.iml
+spring-cloud-provider-dept/src/test/
+/spring-cloud-consumer-dept/.mvn/
+.mvn/
+mvnw
+mvnw.cmd
+
