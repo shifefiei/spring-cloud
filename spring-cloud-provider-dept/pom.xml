@@ -15,6 +15,19 @@
 
     <dependencies>
 
+        <!--配置当前服务的相关信息-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+
+        <!--provider注册到eureka中心去 start-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+        </dependency>
+        <!--provider注册到eureka中心去 end-->
+
         <!--添加mybatis相关-->
         <dependency>
             <groupId>org.springframework.boot</groupId>

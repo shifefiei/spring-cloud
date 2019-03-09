@@ -38,3 +38,18 @@ spring:
       wall:
        enabled: true
 
+# 配置当前服务在注册中心的相关信息
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7001/eureka/  #eureka注册中心地址
+  instance:
+    instance-id: provider-server-dept   #注册中心中显示的当前服务别名
+    prefer-ip-address: true   #点击注册中心别名显示ip地址
+
+# 服务信息说明，在注册中心可以查看
+info:
+  app.name: sff-spring-cloud-provider
+  company.name: com.sff
+  bulid.artifactId: $project.artifactId$
+  bulid.version: $project.version$
