@@ -1,0 +1,19 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: spring-cloud-consumer-feign-dept
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka-server01.com:7001/eureka/,http://eureka-server04.com:7004/eureka/
+  instance:
+    instance-id: consumer-feign-client-dept
+    prefer-ip-address: true
+
+# 开启debug日志
+logging:
+  level:
+    com.sff.spring.cloud.consumer.feign.service.FeignDeptService: debug

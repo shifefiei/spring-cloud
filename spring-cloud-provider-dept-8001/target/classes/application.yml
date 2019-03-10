@@ -52,5 +52,5 @@ eureka:
 info:
   app.name: sff-spring-cloud-provider-8001
   company.name: com.sff
-  bulid.artifactId: $project.artifactId$
-  bulid.version: $project.version$
+  bulid.artifactId: spring-cloud-provider-dept-8001
+  bulid.version: 1.0-SNAPSHOT

@@ -20,3 +20,8 @@
 - @RibbonClient,主启动类上添加该注解
 - 继承 ```AbstractLoadBalancerRule```抽象类
 
+# Feign 
+feign是一种盛明师、模板化的http客户端；接口+注解
+
+- feign 集成了ribbon，通过轮询来进行负载均衡
+

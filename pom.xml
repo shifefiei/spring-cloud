@@ -23,6 +23,7 @@
         <module>spring-cloud-provider-dept-8001</module>
         <module>spring-cloud-provider-dept-8002</module>
         <module>spring-cloud-eureka-server-7004</module>
+        <module>spring-cloud-consumer-dept-feign</module>
     </modules>
 
     <packaging>pom</packaging>
