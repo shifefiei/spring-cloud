@@ -44,9 +44,9 @@ eureka:
     service-url:
       # defaultZone: http://localhost:7001/eureka/  # 单机版eureka注册中心地址
       defaultZone: http://eureka-server01.com:7001/eureka/,http://eureka-server04.com:7004/eureka/  #eureka注册中心地址
-  instance:
-    instance-id: provider-server-dept   #注册中心中显示的当前服务别名
-    prefer-ip-address: true   #点击注册中心别名显示ip地址
+  #instance:
+  #  instance-id: provider-server-dept   #注册中心中显示的当前服务别名
+  #  prefer-ip-address: true   #点击注册中心别名显示ip地址
 
 # 服务信息说明，在注册中心可以查看
 info:
