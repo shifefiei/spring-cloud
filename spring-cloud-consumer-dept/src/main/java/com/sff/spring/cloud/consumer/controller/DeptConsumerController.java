@@ -24,7 +24,6 @@ public class DeptConsumerController {
 
     @GetMapping("/get")
     public List<Dept> consumer() {
-
         System.out.println("--------------------------------------");
         return restTemplate.getForObject(REST_URL_PREFIX+"/cloud/dept/list",List.class);
     }
