@@ -11,7 +11,13 @@ import java.util.List;
 @RestController
 public class DeptConsumerController {
 
-    private static final String REST_URL_PREFIX = "http://localhost:8001";
+    //只支持单机模式下可直接通过ip访问
+    //private static final String REST_URL_PREFIX = "http://localhost:8001";
+
+    /**
+     * 微服务名称：SPRING-CLOUD-PROVIDER-DEPT，在集群模式下通过服务暴露的名称来访问
+     */
+    private static final String REST_URL_PREFIX = "http://SPRING-CLOUD-PROVIDER-DEPT";
 
     @Autowired
     private RestTemplate restTemplate;
@@ -19,6 +25,7 @@ public class DeptConsumerController {
     @GetMapping("/get")
     public List<Dept> consumer() {
 
+        System.out.println("--------------------------------------");
         return restTemplate.getForObject(REST_URL_PREFIX+"/cloud/dept/list",List.class);
     }
 

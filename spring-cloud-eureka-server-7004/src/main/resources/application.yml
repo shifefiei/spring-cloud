@@ -1,5 +1,5 @@
 server:
-  port: 7001
+  port: 7004
 
 # eureka 单机版配置
 #eureka:
@@ -15,9 +15,9 @@ server:
 # eureka 集群版配置
 eureka:
   instance:
-    hostname: eureka-server01.com
+    hostname: eureka-server04.com
   client:
     register-with-eureka: false
     fetch-registry: false
     service-url:
-      defaultZone: http://eureka-server04.com:7004/eureka/  #配置集群中另外注册中心地址
+      defaultZone: http://eureka-server01.com:7001/eureka/  #配置集群中另外注册中心地址

@@ -13,10 +13,23 @@
 	<version>0.0.1-SNAPSHOT</version>
 
 	<name>spring-cloud-consumer-dept</name>
-	<description>Demo project for Spring Boot</description>
+	<description>部门微服务消费者</description>
 
 
 	<dependencies>
+
+		<!--Ribbon 是一种客户端负载均衡-->
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-netflix-ribbon</artifactId>
+		</dependency>
+
+		<!--将当期消费服务注册到eureka中心-->
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+		</dependency>
+		<!--Ribbon-->
 
 		<dependency>
 			<groupId>com.sff.spring.cloud</groupId>

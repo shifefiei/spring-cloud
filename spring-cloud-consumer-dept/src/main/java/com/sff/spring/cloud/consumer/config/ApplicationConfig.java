@@ -1,6 +1,7 @@
 package com.sff.spring.cloud.consumer.config;
 
 
+import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.client.RestTemplate;
@@ -9,6 +10,7 @@ import org.springframework.web.client.RestTemplate;
 public class ApplicationConfig {
 
     @Bean
+    @LoadBalanced //开启客户端负载均衡
     public RestTemplate getRestTemplate() {
         return new RestTemplate();
     }

@@ -1,0 +1,14 @@
+server:
+  port: 8080
+
+
+
+# \u914D\u7F6E\u5F53\u524D\u670D\u52A1\u5728\u6CE8\u518C\u4E2D\u5FC3\u7684\u76F8\u5173\u4FE1\u606F
+eureka:
+  client:
+    com.sff.spring.cloud.provider.service-url:
+      # defaultZone: http://localhost:7001/eureka/  # \u5355\u673A\u7248eureka\u6CE8\u518C\u4E2D\u5FC3\u5730\u5740
+      defaultZone: http://eureka-server01.com:7001/eureka/,http://eureka-server02.com:7002/eureka/,http://eureka-server03.com:7003/eureka/  #eureka\u6CE8\u518C\u4E2D\u5FC3\u5730\u5740
+  instance:
+    instance-id: consumer-client-dept   #\u6CE8\u518C\u4E2D\u5FC3\u4E2D\u663E\u793A\u7684\u5F53\u524D\u670D\u52A1\u522B\u540D
+    prefer-ip-address: true   #\u70B9\u51FB\u6CE8\u518C\u4E2D\u5FC3\u522B\u540D\u663E\u793Aip\u5730\u5740

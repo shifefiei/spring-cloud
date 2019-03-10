@@ -1,0 +1,56 @@
+server:
+  port: 8001
+
+mybatis:
+  config-location: classpath:mybatis/mybatis-config.xml   #mybatis的配置文件位置
+  type-aliases-package: com.sff.spring.cloud.api          #所有entity类所在的包
+  mapper-locations: classpath:mybatis/mapper/*.xml                  #mapper的映射文件
+
+spring:
+  application:
+    name: spring-cloud-provider-dept      #对外暴露的微服务名称，很重要,多个相同功能的微服务用同一个名称
+  datasource:
+    username: root
+    password: root
+    url: jdbc:mysql://127.0.0.1:3306/sff_test_01
+    driver-class-name: com.mysql.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource      # 指定自己使用的数据源
+
+    # DruidDataSource 其他属性配置
+    druid:
+     initialSize: 5
+     minIdle: 5
+     maxActive: 20
+     maxWait: 60000
+     timeBetweenEvictionRunsMillis: 60000
+     minEvictableIdleTimeMillis: 300000
+     validationQuery: SELECT 1 FROM DUAL
+     testWhileIdle: true
+     testOnBorrow: false
+     testOnReturn: false
+     poolPreparedStatements: true
+     maxPoolPreparedStatementPerConnectionSize: 20
+     useGlobalDataSourceStat: true
+     filter:
+      stat:
+       enabled: true
+       log-slow-sql: true
+      wall:
+       enabled: true
+
+# 配置当前服务在注册中心的相关信息
+eureka:
+  client:
+    service-url:
+      # defaultZone: http://localhost:7001/eureka/  # 单机版eureka注册中心地址
+      defaultZone: http://eureka-server01.com:7001/eureka/,http://eureka-server04.com:7004/eureka/  #eureka注册中心地址
+  instance:
+    instance-id: provider-server-dept   #注册中心中显示的当前服务别名
+    prefer-ip-address: true   #点击注册中心别名显示ip地址
+
+# 服务信息说明，在注册中心可以查看
+info:
+  app.name: sff-spring-cloud-provider-8001
+  company.name: com.sff
+  bulid.artifactId: $project.artifactId$
+  bulid.version: $project.version$

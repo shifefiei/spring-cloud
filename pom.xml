@@ -18,11 +18,11 @@
 
     <modules>
         <module>spring-cloud-domain</module>
-        <module>spring-cloud-provider-dept</module>
         <module>spring-cloud-consumer-dept</module>
         <module>spring-cloud-eureka-server-7001</module>
-        <module>spring-cloud-eureka-server-7002</module>
-        <module>spring-cloud-eureka-server-7003</module>
+        <module>spring-cloud-provider-dept-8001</module>
+        <module>spring-cloud-provider-dept-8002</module>
+        <module>spring-cloud-eureka-server-7004</module>
     </modules>
 
     <packaging>pom</packaging>
