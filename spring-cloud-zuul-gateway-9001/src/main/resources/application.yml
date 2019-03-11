@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: spring-cloud-zuul-gateway-90001
+
+server:
+  port: 9001
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka-server01.com:7001/eureka/,http://eureka-server04.com:7004/eureka/
+
+  instance:
+    instance-id: zuul-gateway-9001.com
+    prefer-ip-address: true

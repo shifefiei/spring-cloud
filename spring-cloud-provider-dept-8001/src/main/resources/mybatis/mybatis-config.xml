@@ -8,6 +8,6 @@
     </settings>
 
     <typeAliases>
-        <package name="com.sff.spring.cloud.api"/>
+        <package name="com.sff.spring.cloud.api.entity"/>
     </typeAliases>
 </configuration>

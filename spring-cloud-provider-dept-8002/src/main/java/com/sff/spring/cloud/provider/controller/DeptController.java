@@ -1,6 +1,6 @@
 package com.sff.spring.cloud.provider.controller;
 
-import com.sff.spring.cloud.api.Dept;
+import com.sff.spring.cloud.api.entity.Dept;
 import com.sff.spring.cloud.provider.service.DeptService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.client.ServiceInstance;

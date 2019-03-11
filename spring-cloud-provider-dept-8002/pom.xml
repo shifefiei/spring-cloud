@@ -60,7 +60,7 @@
 
         <dependency>
             <groupId>com.sff.spring.cloud</groupId>
-            <artifactId>spring-cloud-domain</artifactId>
+            <artifactId>spring-cloud-api</artifactId>
             <version>${project.version}</version>
         </dependency>
 

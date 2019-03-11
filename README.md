@@ -25,3 +25,22 @@ feign是一种盛明师、模板化的http客户端；接口+注解
 
 - feign 集成了ribbon，通过轮询来进行负载均衡
 
+#Hystrix 熔断器
+```java
+@EnableHystrix
+@HystrixCommand
+```
+
+- 熔断
+- 降级<br/>
+定义一个类，实现FallbackFactory接口，并将该类注入到容器中
+- 服务监控: HystrixDashborad
+
+#Zuul 
+zuul提供了过滤、路由的功能
+- 路由：负责将外部请求转发到具体的微服务上去，实现外部访问统一入口的基础
+- 过滤：负责对请求的过程进行处理，实现请求校验的功能
+
+#Config 
+- 服务端Config
+- 客户端Config
