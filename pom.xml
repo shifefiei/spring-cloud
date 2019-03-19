@@ -26,6 +26,9 @@
         <module>spring-cloud-consumer-dept-feign</module>
         <module>spring-cloud-provider-dept-hystrix-8001</module>
         <module>spring-cloud-zuul-gateway-9001</module>
+        <module>spring-cloud-hello-grpc-server</module>
+        <module>spring-cloud-hello-grpc-client</module>
+        <module>spring-cloud-hello-grpc-sdk</module>
     </modules>
 
     <packaging>pom</packaging>
