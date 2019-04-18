@@ -1,5 +1,6 @@
 package com.sff.spring.cloud.grpc.server;
 
+import com.google.protobuf.Empty;
 import com.sff.spring.cloud.grpc.sdk.HelloRequest;
 import com.sff.spring.cloud.grpc.sdk.HelloResponse;
 import com.sff.spring.cloud.grpc.sdk.HelloServiceGrpc;
@@ -23,5 +24,10 @@ public class HelloService extends HelloServiceGrpc.HelloServiceImplBase {
 
         responseObserver.onNext(response);
         responseObserver.onCompleted();
+    }
+
+    @Override
+    public void sayHello(HelloRequest request, StreamObserver<Empty> responseObserver) {
+        System.out.println("------------result api---------------");
     }
 }
